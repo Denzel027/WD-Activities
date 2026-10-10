@@ -1,0 +1,136 @@
+body {
+    background-color: #2F7D64;
+}
+
+.bento-green {
+    background-color: #1D5B47;
+}
+
+.bento-orange {
+    background-color: #FF7A5C;
+}
+
+.bento-white {
+    background-color: #EAF4EF;
+}
+
+.selected {
+    background-color: #A8F0B8;
+}
+
+.check {
+    color: #06210F;
+    background-color: #A8F0B8;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-selected {
+    color: #06210F;
+}
+
+.card-c1 {
+    height: 320px;
+    width: 400px;
+}
+
+.card-r1 {
+    height: 170px;
+    width: 510px;
+}
+
+.card-r2 {
+    height: 300px;
+    width: 510px;
+}
+
+.card-r3 {
+    height: 170px;
+    width: 1052px;
+}
+
+.text-verdict{
+    color: #2B0C04;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+.text-main {
+    color: #F2FBF6;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+.text-big {
+    font-weight: 1000;
+}
+
+.font-l{
+    font-size: 4rem;
+}
+
+.text-sm {
+    font-weight: 500;
+}
+
+
+.text-medium {
+    font-weight: 700;
+}
+
+.text-mute {
+    color: #C4E4D6;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+.iframe {
+    border:solid 1px #777; 
+    width: 340px; 
+    height: 180px; 
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: #F2FBF6;
+}
+
+.cal { color: #06210F; font-family: 'Schibsted Grotesk', sans-serif; }
+
+.cal-label { font-size: 11px; font-weight: 600; letter-spacing: .06em; color: #4E6B5E; }
+
+.cal-count { font-size: 13px; font-weight: 700; color: #06210F; }
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.cal-weekdays { font-size: 11px; font-weight: 600; color: #4E6B5E; margin: 6px 0 4px; }
+
+.day-btn {
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #D3E5DC;
+    color: #06210F;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color .15s, color .15s;
+}
+
+.day-btn:hover { background-color: #BBD6C8; }
+
+.day-btn.worked { background-color: #1F7A52; color: #FFFFFF; }
+
+.day-btn.today { border-color: #FF7A5C; }
+
+.day-off { font-size: 13px; line-height: 30px; color: #8FA79B; }
+
+.cal-earned { font-size: 26px; font-weight: 800; line-height: 1; }
+
+.cal-hint { font-size: 11px; color: #4E6B5E; text-align: right; max-width: 110px; }
