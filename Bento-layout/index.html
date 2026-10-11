@@ -18,12 +18,12 @@
 <body>
 
     <div class="container-fluid min-vh-100">
-        <div class="row p-4"> <!-- Parent Row -->
-            <div class="col-3 "> <!-- First Column -->
+        <div class="row p-4 g-3"> <!-- Parent Row -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3"> <!-- First Column -->
                 <div class="row mb-3"> <!-- Can you afford it -->
                     <div class="card card-c1 bento-green rounded-5 shadow p-3">
                         <div class="fs-1 text-main text-big">
-                            Can you really
+                            Can you
                         </div>
                         <div class="fs-1 text-main text-big mb-2">
                             afford it?
@@ -31,19 +31,26 @@
                         <div class="p fs-5 text-mute mb-3">
                             Pick a rule
                         </div>
-                        <div
-                            class="d-flex justify-content-around align-items-center border bg-transparent p-2 mb-3 rounded-4 text-center">
-                            <span class="text-main text-medium fs-5">50 / 30 / 20 </span>
-                            <span class="text-mute">Saving, Needs, Wants</span>
-                        </div>
-                        <div
-                            class="d-flex justify-content-around align-items-center border p-1 rounded-4 text-center selected">
-                            <span class="text-selected text-medium fs-5"> 3x rule </span>
-                            <span class="text-selected">Could you buy it 3 times?</span>
+
+                        <div class="row g-xs-2">
+                            <div class="col-6">
+                                <div
+                                    class="rule-opt h-100 d-flex flex-column justify-content-center align-items-center border bg-transparent p-2 rounded-4 text-center">
+                                    <span class="rule-name text-main text-medium">50 / 30 / 20</span>
+                                    <span class="rule-desc text-mute">Saving, Needs, Wants</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div
+                                    class="rule-opt h-100 d-flex flex-column justify-content-center align-items-center border p-2 rounded-4 text-center selected">
+                                    <span class="rule-name text-selected text-medium">3x rule</span>
+                                    <span class="rule-desc text-selected">Could you buy it 3 times?</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row"> <!-- Calendar -->
+                <div class="row "> <!-- Calendar -->
                     <div class="card card-c1 bento-white rounded-5 shadow ">
                         <div class="cal p-3">
                             <div class="d-flex justify-content-between cal-label">
@@ -101,99 +108,95 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9"> <!-- Second Column -->
-                <div class="row"> <!-- First Row -->
-                    <div class="col ms-4 mb-2">
+
+            <div class="col-12 col-md-6 col-lg-8 col-xl-9">
+                <div class="row ms-md-2">
+                    <div class="col-12 col-sm-5 col-md-6 col-lg-6 col mb-2">
                         <div class="card card-r1 shadow rounded-5 bento-green p-4">
-                            <div class="fs-6 text-mute text-medium mb-2">Monthly pay</div>
-                            <h1>
-                                <div class="text-big text-main ">$3,000</div>
-                            </h1>
-                            <hr class="my-1 mb-1">
-                            <div class="text-mute text-medium">Pro rated from days worked</div>
-                        </div>
+                            <div>
+                                <div class="fs-6 text-mute text-medium mb-2">Monthly pay</div>
 
-                    </div>
-                    <div class="col">
-                        <div class="card card-r1 shadow rounded-5 bento-green">
-                            <div class="row p-4 px-5">
-                                <div class="col fs-5 text-mute text-medium mb-2">
-                                    I want
+                                <div class="text-big text-main fs-3">$3,000</div>
 
-                                    <div class="text-big text-main fs-4">Laptop</div>
-                                    <hr class="mt-1">
-                                </div>
-                                <div class="col fs-5 text-mute text-medium mb-2">
-                                    Costs
-
-                                    <div class="text-big text-main fs-4">$1000</div>
-                                    <hr class="mt-1">
-                                </div>
+                                <hr class="my-1 mb-1">
+                                <div class="text-mute text-medium font-md">Pro rated from days worked</div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-7 col-md-6 col-lg-6 col mb-2">
+                        <div class="card card-r1 shadow rounded-5 bento-green p-4">
+                            <p class="text-mute text-medium">
+                                Wants vs costs <br>
+                                <div class="text-main text-big font-cust">Laptop: $1,000</div>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col ms-4">
-                        <div class="card card-r2 shadow rounded-5 bento-orange">
-                            <div class="text-verdict p-4 fs-6 text-sm">
+                <div class="row ms-md-2">
+                    <div class="col-12 col-sm-7 col-md-6 col-lg-6">
+                        <div class="card card-r2 shadow rounded-5 bento-orange mb-2 p-4">
+                            <div class="text-verdict fs-6 text-sm mb-5 mb-md-0 mb-lg-5">
                                 THE VERDICT
                             </div>
 
-                            <h1 class="text-verdict text-big p-4 font-l mb-0">Not yet.</h1>
+                            <h1 class="text-verdict text-big font-l mb-5 mb-md-1 mb-lg-5">Not yet.</h1>
 
-                            <div class="text-verdict p-4 fs-6 text-sm fw-bold">
-                                You do not have sufficient funds to buy the item, you need atleast $5,400 to afford it
+                            <div class="text-verdict fs-6 text-sm fw-bold">
+                                
+                                <p class="font-md">You do not have sufficient funds to buy the item, you need atleast $5,400 to afford it</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-2">
+                    <div class="col-12 col-sm-5 col-md-6 col-lg-6 mb-2">
                         <div class="card card-r2 shadow rounded-5 bento-green">
                             <div class="text-mute p-4 text-sm">
-                                <p class="fs-5">Decision Making</p>
+                                <p class="fs-6">Decision</p>
 
-                                <label>Set it aside and wait for further paychecks</label>
-                                <div class="progress mb-3">
+                                <div class="font-md"><label>Wait for further paychecks</label>
+                                <div class="progress mb-3 mb-sm-2 mb-lg-4">
                                     <div class="progress-bar bg-success" role="progressbar" style="width: 90%"
                                         aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
 
                                 <label>Buy it now but live within your means</label>
-                                <div class="progress mb-3">
+                                <div class="progress mb-3 mb-sm-2 mb-lg-4">
                                     <div class="progress-bar bg-warning" role="progressbar" style="width: 65%"
                                         aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
 
                                 <label>Buy it now without thinking</label>
-                                <div class="progress mb-3">
+                                <div class="progress mb-3 mb-sm-2">
                                     <div class="progress-bar bg-danger" role="progressbar" style="width: 25%"
                                         aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                </div></div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col ms-4">
+                <div class="row ms-md-2">
+                    <div class=" col">
                         <div class="card card-r3 shadow rounded-5 bento-green p-4">
-                            <div class="text-mute text-sm fs-6 mb-3">
-                                Advice
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-8 text-main text-big text-justify">
-                                    Save buying the item and wait until you have enough.
-                                    Until then,
-                                    refrain from buying it unless necessary or unless it's a true emergency.
+                            <div class="row ">
+                                <div class="text-mute text-sm fs-6 mb-lg-3">
+                                    Advice
                                 </div>
-                                <div class="col-4 d-flex justify-content-center align-items-center">
-                                    <button type="button" class="btn check rounded-pill">Check other items</button>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-8">
+                                    <p class="text-main text-big text-justify font-md mb-2">Save buying the item and wait
+                                        until
+                                        you have enough.
+                                        Until then,
+                                        refrain from buying it unless necessary or unless it's a true emergency.</p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-4 d-flex justify-content-center align-items-center">
+                                    <button type="button" class="btn check rounded-3 font-md mb-lg-3">Check other items</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
