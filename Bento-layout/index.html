@@ -22,10 +22,10 @@
             <div class="col-12 col-md-6 col-lg-4 col-xl-3"> <!-- First Column -->
                 <div class="row mb-3"> <!-- Can you afford it -->
                     <div class="card card-c1 bento-green rounded-5 shadow p-3">
-                        <div class="fs-1 text-main text-big">
+                        <div class="fs-1 text-main text-big typing" style="--n:8; --d:0.5s">
                             Can you
                         </div>
-                        <div class="fs-1 text-main text-big mb-2">
+                        <div class="fs-1 text-main text-big mb-2 typing" style="--n:8; --d:0.8s">
                             afford it?
                         </div>
                         <div class="p fs-5 text-mute mb-3">
@@ -35,7 +35,7 @@
                         <div class="row g-xs-2">
                             <div class="col-6">
                                 <div
-                                    class="rule-opt h-100 d-flex flex-column justify-content-center align-items-center border bg-transparent p-2 rounded-4 text-center">
+                                    class="rule-opt h-100 d-flex flex-column justify-content-center align-items-center border p-2 rounded-4 text-center">
                                     <span class="rule-name text-main text-medium">50 / 30 / 20</span>
                                     <span class="rule-desc text-mute">Saving, Needs, Wants</span>
                                 </div>
@@ -139,7 +139,7 @@
                                 THE VERDICT
                             </div>
 
-                            <h1 class="text-verdict text-big font-l mb-5 mb-md-1 mb-lg-5">Not yet.</h1>
+                            <h1 class="text-verdict text-big font-l mb-5 mb-md-1 mb-lg-5 typing" style="--n:8; --d:0.9s">Not yet.</h1>
 
                             <div class="text-verdict fs-6 text-sm fw-bold">
                                 
@@ -150,7 +150,7 @@
                     <div class="col-12 col-sm-5 col-md-6 col-lg-6 mb-2">
                         <div class="card card-r2 shadow rounded-5 bento-green">
                             <div class="text-main p-4 text-sm">
-                                <p class="fs-6 text-mute">Decision</p>
+                                <p class="fs-6 text-mute text-medium">Decision</p>
 
                                 <div class="font-md"><label>Wait for further paychecks</label>
                                 <div class="progress mb-3 mb-sm-2 mb-lg-4">
@@ -178,7 +178,7 @@
                     <div class=" col">
                         <div class="card card-r3 shadow rounded-5 bento-green p-4">
                             <div class="row ">
-                                <div class="text-mute text-sm fs-6 mb-lg-3">
+                                <div class="text-mute text-medium fs-6 mb-lg-3">
                                     Advice
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-8">
@@ -204,14 +204,49 @@
     <script>
         const total = 22, pay = 3000;
         const days = document.querySelectorAll('#cal-days .day-btn');
+        const earnedEl = document.getElementById('earned');
+        const countEl = document.getElementById('worked-count');
+
+        
+        document.querySelectorAll('.card').forEach((card, i) => card.style.setProperty('--i', i));
+
+        
+        let shown = Number(earnedEl.textContent.replace(/,/g, '')), raf;
+        function countTo(target) {
+            cancelAnimationFrame(raf);
+            const start = shown, t0 = performance.now(), dur = 500;
+            function step(now) {
+                const p = Math.min((now - t0) / dur, 1);
+                const eased = 1 - Math.pow(1 - p, 3);         
+                shown = start + (target - start) * eased;
+                earnedEl.textContent = Math.round(shown).toLocaleString();
+                if (p < 1) raf = requestAnimationFrame(step); else shown = target;
+            }
+            raf = requestAnimationFrame(step);
+        }
+
+        
+        function bump(el) {
+            el.classList.remove('bump');
+            void el.offsetWidth;                               
+            el.classList.add('bump');
+        }
+
         function update() {
             const count = document.querySelectorAll('#cal-days .day-btn.worked').length;
-            document.getElementById('worked-count').textContent = count;
-            document.getElementById('earned').textContent = Math.round(pay * count / total).toLocaleString();
+            countEl.textContent = count;
+            bump(countEl);
+            countTo(Math.round(pay * count / total));
         }
         days.forEach(btn => btn.addEventListener('click', () => {
             btn.classList.toggle('worked');
             update();
+        }));
+
+        const rules = document.querySelectorAll('.rule-opt');
+        rules.forEach(opt => opt.addEventListener('click', () => {
+            rules.forEach(o => o.classList.remove('selected'));
+            opt.classList.add('selected');
         }));
     </script>
 </body>
