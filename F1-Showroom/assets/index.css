@@ -1,0 +1,96 @@
+body {
+    background-color: #16171A;
+    background:
+        radial-gradient(ellipse 85% 70% at 50% 38%,
+            #35373A 0%,
+            #27292C 50%,
+            #16171A 100%);
+    background-attachment: fixed;
+}
+
+.img1 {
+    width: 100%;
+    height: 70px;
+}
+
+.img2 {
+    width: 100%;
+    height: 30px;
+}
+
+.barlow {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main-red {
+    color : #E20401;
+}
+
+.main-yellow {
+    color : #D8B36A;
+}
+
+.main-white {
+    color : #FFFFFF;
+}
+
+.font-l {
+    font-size: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+    font-weight: 900;
+}
+
+.font-sm {
+    font-size: clamp(0.885rem, 0.8rem + 0.5vw, 1.2rem);
+    font-weight: 300;
+}
+
+.card {
+    height : 430px;
+    width : 80%;
+
+}
+
+.mercedes {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 56%,
+      rgba(0, 210, 190, 0.30) 0%,
+      rgba(0, 210, 190, 0) 72%),
+    linear-gradient(180deg,
+      #0C3836 0%,
+      #0A1012 100%);
+}
+
+.ferrari {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 56%,
+      rgba(232, 17, 45, 0.32) 0%,
+      rgba(232, 17, 45, 0) 72%),
+    linear-gradient(180deg,
+      #43101A 0%,
+      #100A0B 100%);
+}
+
+.mclaren {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 56%,
+      rgba(255, 128, 0, 0.32) 0%,
+      rgba(255, 128, 0, 0) 72%),
+    linear-gradient(180deg,
+      #47250A 0%,
+      #100C08 100%);
+}
+
+.redbull {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 56%,
+      rgba(70, 110, 240, 0.34) 0%,
+      rgba(70, 110, 240, 0) 72%),
+    linear-gradient(180deg,
+      #0E2159 0%,
+      #0A0C15 100%);
+}
+
