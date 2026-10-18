@@ -17,15 +17,15 @@
 </head>
 
 <body>
-    <div class="container-fluid min-vh-100"> <!--Main Container for all-->
-        <div class="row"> <!--Static Navbar-->
-            <div class="col">
+    <div class="container-fluid min-vh-100" id="home"> <!--Main Container for all-->
+        <div class="row sticky-top"> <!--Static Navbar-->
+            <div class="col ">
                 <div class="d-flex justify-content-between align-items-center bg-transparent border-0 px-3">
                     <div>
-                        <img src="./img/f1.png" class="img1">
+                        <a href="#home"><img src="./img/f1.png" class="img1"></a>
                     </div>
                     <div>
-                        <img src="./img/fia.png" class="img2">
+                         <a href="#home"><img src="./img/fia.png" class="img2"></a>
                     </div>
                 </div>
             </div>
@@ -33,28 +33,62 @@
 
         <div class="row"> <!--Second Heading-->
             <div class="col text-center">
-                <div class="d-flex justify-content-center align-items-center  gap-3"><p class="font-l barlow main-red">Grand Prix</p>
-                <p class="font-l barlow main-yellow">Winners</p>
-                <p class="font-l barlow main-white">Gallery</p>
+                <div class="d-flex justify-content-center align-items-center  gap-3">
+                    <p class="font-l barlow main-red">Grand Prix</p>
+                    <p class="font-l barlow main-yellow">Winners</p>
+                    <p class="font-l barlow main-white">Gallery</p>
                 </div>
-                
-                <p class="font-sm roboto main-white">One bay for every 2026 grand prix winner of the season, each parked beside the car that took the flag.</p>
+
+                <p class="font-sm roboto main-white">One bay for every 2026 grand prix winner of the season, each parked
+                    beside the car that took the flag.</p>
             </div>
         </div>
 
-        <div class="row mt-3">
+        <div class="row my-3">
             <div class="col d-flex align-items-center justify-content-center">
                 <div class="card border-0 mercedes rounded-3">
-                    <div class="card-body"><div class="card-title d-flex align-items-center text-start">
-                        <img src="./img/aust.png">
-                        <p class="sm main-white">Australia GP</p>
-                    </div></div>
-                    
+                    <div class="card-body">
+                        <div class="card-title d-flex align-items-center text-start">
+                            <img src="./img/aust.png">
+                            <p class="card-text roboto main-white">Australia GP</p>
+                        </div>
+                        <div class="row">
+                            <div class="col racer d-flex justify-content-center align-items-center">
+                                <div
+                                    class="card bg-transparent border-0 d-flex justify-content-center align-items-center">
+                                    <img src="./img/racer1.png" class="img-racer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-title d-flex gap-3 justify-content-center align-items-center">
+                            <p class="main-white font-md">GEORGE RUSSEL</p>
+                            <p class="main-white font-md"> | </p>
+                            <p class="main-white font-md blue">56</p>
+                        </div>
+                        <div class="card-title d-flex gap-3 justify-content-center align-items-center">
+                            <p class="main-white barlow team-font blue">Mercedes</p>
+                        </div>
+                        <div class="card-title d-flex gap-3 justify-content-center align-items-center">
+                            <p class="main-white date-font roboto">08 March</p>
+                            <p class="main-white date-font fontroboto"> | </p>
+                            <p class="main-white date-font roboto"> Lap 58</p>
+                        </div>
+                        <div class="main-white roboto d-flex justify-content-center align-items-center">
+                            <a href="#parent-list" class="btn btn-light btn-sm rounded-pill roboto px-3">
+                                View full list <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <div class="min-vh-100" id="parent-list"> <!--Parent row-->
+
+        </div>
     </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
