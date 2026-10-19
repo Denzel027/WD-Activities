@@ -85,6 +85,14 @@ body::after {
     color : #00D2BE;
 }
 
+.red {
+    color : #FF5468;
+}
+
+.orange {
+    color : #FFA347;
+}
+
 .font-l {
     font-size: clamp(2.5rem, 1.5rem + 3vw, 4rem);
     font-weight: 900;
@@ -96,9 +104,26 @@ body::after {
     font-weight: 800;
 }
 
+.font-cards {
+    font-size: clamp(1rem, 0.357rem + 1.257vw, 2rem);
+    font-style : italic;
+    font-weight: 800;
+}
+
+.sub-md {
+    font-size: clamp(1rem, 0.357rem + 1.257vw, 2.5rem);
+    font-weight: 500;
+}
+
 .font-sm {
     font-size: clamp(0.885rem, 0.8rem + 0.5vw, 1.2rem);
     font-weight: 300;
+}
+
+.font-footer {
+    font-size: clamp(0.885rem, 0.8rem + 0.5vw, 1.2rem);
+    font-weight: 100;
+    opacity: 50%;
 }
 
 .team-font {
@@ -111,6 +136,11 @@ body::after {
     font-weight: 500;
 }
 
+.date-font-sm{
+    font-size: clamp(0.885rem, 0.5rem + 0.5vw, 1.2rem);
+    font-weight: 300;
+}
+
 .card-text {
     font-size: clamp(1.2rem, 0.7rem + 0.5vw, 1.2rem);
     font-weight: 500;
@@ -118,8 +148,19 @@ body::after {
 
 .card {
     max-height : 100%;
-    width : 85%;
+    width : 100%;
 
+}
+
+.card-l {
+    max-height : 100%;
+    width : 100%;
+
+}
+
+.flag-sm {
+    height: 50px;
+    width: 50px;
 }
 
 .racer {
